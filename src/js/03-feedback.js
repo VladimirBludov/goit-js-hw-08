@@ -32,4 +32,7 @@ function onFormSubmit(evt) {
   evt.target.reset();
   localStorage.removeItem(STORAGE_KEY_FORM);
   console.log(formData);
+  Object.keys(formData).forEach(keyName => {
+    delete formData[keyName];
+  });
 }
